@@ -1,3 +1,3 @@
-# Leet-code
+# Neet Code 150
 
-My solutions for some of the Leet Code problems
+My solutions for Neet Code 159
