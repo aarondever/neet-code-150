@@ -1,0 +1,28 @@
+def partition(arr: list[int], low: int, high: int) -> int:
+    pivot = arr[high]
+    i = low - 1
+
+    for j in range(low, high):
+        if arr[j] < pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+
+
+def quickSort(arr: list[int], low: int, high: int):
+    if low < high:
+        pi = partition(arr, low, high)
+        partition(arr, low, pi - 1)
+        partition(arr, pi + 1, high)
+
+
+if __name__ == "__main__":
+    arr = [10, 7, 8, 9, 1, 5]
+    n = len(arr)
+
+    quickSort(arr, 0, n - 1)
+
+    for val in arr:
+        print(val, end=" ")
