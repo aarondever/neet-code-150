@@ -1,6 +1,6 @@
 def selection_sort(arr: list[int]):
     n = len(arr)
-    for i in range(0, n - 1):
+    for i in range(n - 1):
         min_idx = i
 
         for j in range(i + 1, n):
